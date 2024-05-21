@@ -1,10 +1,7 @@
 import { useState } from "react";
-
 import { ResumeContext } from "./utils/ResumeContext";
-import { Editor } from "./components/Builder/Index";
-
 import "./App.css";
-import Dashboard from "./components/Dashboard";
+import Router from "./routes/router";
 
 const App = () => {
   const [initialState, setInitialState] = useState({
@@ -19,8 +16,7 @@ const App = () => {
   return (
     <div className="App">
       <ResumeContext.Provider value={{ initialState, setInitialState }}>
-        <Dashboard />
-        <Editor />
+        <Router />
       </ResumeContext.Provider>
     </div>
   );
